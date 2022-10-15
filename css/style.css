@@ -1,0 +1,1008 @@
+/* ----------------------------------------------------
+ common↓
+---------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: "Montserrat", "Noto Sans JP", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-size: 16px;
+
+  letter-spacing: 0.05em;
+
+  color: var(--text-color);
+  background-color: var(--bg-color);
+
+  font-feature-settings: "palt";
+}
+
+
+:root {
+  --text-color: #ffffff;
+  --main-color: #d136d1;
+  --bg-color: #141414;
+  --bg-gradient: linear-gradient( 135deg, #0e002e 0%, #1e092b 23%, #320c65 49%, #a01b7c 80%, #c21780 100% );
+}
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 64px;
+}
+
+
+img {
+  width: 100%;
+}
+
+
+a {
+  text-decoration: none;
+
+  color: var(--text-color);
+}
+
+
+.btn {
+  margin-top: 24px;
+}
+
+.btn-link {
+  display: inline-block;
+
+  width: 300px;
+  padding: 24px 0;
+
+  transition: all 0.2s;
+  text-align: center;
+
+  border-radius: 36px;
+  background: linear-gradient(135deg, #c41a7f 0%, #664bbf 100%);
+  box-shadow: 0px 10px 0px 0px #dd118e;
+}
+
+
+.btn-link:hover {
+  transform: translateY(5px);
+
+  box-shadow: 0 5px 0 #dd118e;
+}
+
+#to_top {
+  position: fixed;
+  z-index: 10;
+  right: 32px;
+  bottom: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 64px;
+  height: 64px;
+
+  transition: opacity 0.3s;
+  text-align: center;
+
+  opacity: 0;
+  border-radius: 32px;
+  background: var(--main-color);
+}
+
+
+#to_top.show {
+  opacity: 1;
+}
+
+
+#to_top .material-icons-round {
+  font-size: 40px;
+}
+
+
+
+
+
+
+
+.h-section {
+  text-align: center;
+}
+
+.h-section-main {
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 1;
+
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  color: var(--main-color);
+}
+
+.h-section-sub {
+  font-size: 22px;
+
+  display: block;
+
+  margin-top: 8px;
+}
+
+
+
+/* ----------------------------------------------------
+ header↓
+---------------------------------------------------- */
+header {
+  position: fixed;
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+  width: 100%;
+  height: 90px;
+  padding: 32px;
+}
+
+
+
+.header-logo {
+  font-size: 28px;
+
+  color: var(--main-color);
+}
+
+
+/* header .g-navi */
+
+
+
+header .navi-list {
+  display: flex;
+
+  gap: 32px;
+}
+
+
+
+header .navi-item {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/*.navi-link */
+
+
+/* ----------------------------------------------------
+ hero↓
+---------------------------------------------------- */
+.hero {
+  background: var(--bg-gradient);
+}
+
+.hero-wrapper {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  max-width: 1240px;
+  height: 700px;
+  margin: 0 auto;
+  padding: 0 50px;
+
+  background-image: url(../img/mv.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: cover;
+  background-size: 560px 737px;
+}
+
+
+.hero-text {
+  position: relative;
+}
+
+
+
+.hero-title {
+  margin-top: 32px;
+}
+
+.hero-sub-title {
+  font-size: 24px;
+
+  color: var(--main-color);
+}
+
+.hero-main-title {
+  font-size: 100px;
+  font-weight: bold;
+  line-height: 1;
+
+  display: block;
+
+  margin-top: 16px;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+
+.hero-data-title {
+  font-size: 32px;
+
+  display: block;
+
+  margin-top: 16px;
+}
+
+
+.hero .btn {
+  margin-top: 64px;
+}
+
+
+.hero .btn::after {
+  position: absolute;
+  z-index: 5;
+  right: 40px;
+  bottom: 60px;
+
+  display: block;
+
+  width: 326px;
+  height: 68px;
+
+  content: "";
+  transform: rotate(-13deg);
+
+  background-image: url(../img/teiji-de-kaerumon.svg);
+  background-size: contain;
+}
+
+
+.hero-speaker {
+  position: absolute;
+  right: 220px;
+  bottom: 30px;
+
+  display: none;
+}
+
+.hero-speaker-name {
+  font-size: 24px;
+}
+
+
+
+.hero-speaker-job {
+  font-size: 14px;
+
+  display: block;
+
+  margin-top: 8px;
+}
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------
+ about↓
+---------------------------------------------------- */
+.about {
+  margin-top: 128px;
+}
+
+
+.about-wrapper {
+  display: flex;
+
+  margin-top: 56px;
+}
+
+
+.about-img-wrapper {
+  width: 40%;
+}
+
+.about-text-wrapper {
+  width: 60%;
+  margin: 80px 0 0 72px;
+}
+
+
+.h-about-text-sub {
+  font-size: 24px;
+
+  display: block;
+}
+
+
+
+.h-about-text-main {
+  font-size: 48px;
+
+  display: block;
+
+  margin-top: 16px;
+
+  color: var(--main-color);
+}
+
+
+.about-text {
+  line-height: 1.8;
+
+  margin-top: 40px;
+
+  letter-spacing: 0.05em;
+}
+
+.about-table-wrapper {
+  margin-top: 24px;
+}
+
+/* about-table */
+/* <tr> */
+.about-table th {
+  line-height: 1.8;
+
+  padding-right: 16px;
+}
+
+
+
+
+
+
+/* ----------------------------------------------------
+ speaker↓
+---------------------------------------------------- */
+.speaker {
+  margin-top: 64px;
+  padding-bottom: 80px;
+
+  background: var(--bg-gradient);
+}
+
+.speaker .h-section {
+  padding-top: 64px;
+}
+
+
+.speaker-wrapper {
+  display: flex;
+
+  max-width: 1040px;
+  margin: 128px auto 0;
+  padding: 0 64px;
+}
+
+
+
+
+.speaker-text-inner {
+  width: 60%;
+  margin: 0 64px 0 0;
+}
+
+
+/* .speaker .speaker-name{}*/
+
+
+
+.speaker-name-main {
+  font-size: 40px;
+
+  color: var(--main-color);
+}
+
+.speaker-name-sub {
+  font-size: 18px;
+
+  display: block;
+
+  margin-top: 8px;
+}
+
+
+.speaker-text-box {
+  margin-top: 40px;
+}
+
+
+.speaker-text {
+  line-height: 1.8;
+}
+
+
+.speaker-img-wrapper {
+  width: 40%;
+}
+
+
+
+.speaker-wrapper:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+
+
+.speaker-wrapper:nth-child(2n) .speaker-text-inner {
+  margin: 0 0 0 64px;
+}
+
+
+
+
+/* ----------------------------------------------------
+ session↓
+---------------------------------------------------- */
+.session {
+  margin-top: 64px;
+}
+
+
+.session-wrapper {
+  margin-top: 40px;
+}
+
+
+/* .session-list*/
+
+
+.session-item {
+  display: flex;
+
+  width: 100%;
+  padding: 40px 0;
+
+  border-bottom: 2px solid var(--main-color);
+}   
+
+
+.session-data {
+  padding: 0 128px 0 32px;
+}
+
+
+
+/* .session-inner*/
+
+
+
+.h-session-title {
+  color: var(--main-color);
+}
+
+.session-text-box {
+  margin-top: 16px;
+}
+
+
+
+.session-text {
+  line-height: 1.8;
+}
+
+
+
+/* ----------------------------------------------------
+ register↓
+---------------------------------------------------- */
+.register {
+  margin-top: 64px;
+  padding-bottom: 64px;
+
+  background-image: url(../img/bg.jpg);
+}
+
+.register .h-section {
+  padding-top: 64px;
+}
+
+
+.register-wrapper {
+  max-width: 920px;
+  margin: 54px auto 32px;
+  padding: 64px;
+
+  border: 4px solid var(--main-color);
+  border-radius: 16px;
+  background-color: var(--bg-color);
+}
+
+
+
+.form-item {
+  margin-top: 64px;
+}
+
+
+.form-title {
+  margin-bottom: 16px;
+}
+
+.form-require {
+  font-size: 12px;
+
+  padding-left: 16px;
+
+  color: var(--main-color);
+}
+
+.form-radio {
+  margin-right: 32px;
+}
+
+
+.form-input {
+  display: block;
+
+  width: 320px;
+  height: 40px;
+  margin-top: 16px;
+}
+
+
+.form-textarea {
+  display: block;
+
+  width: 100%;
+  max-width: 600px;
+  height: 240px;
+  margin-top: 16px;
+}
+
+
+
+.form-select {
+  display: block;
+
+  width: 320px;
+  height: 40px;
+  margin-top: 16px;
+}
+
+
+
+.register .btn {
+  margin-top: 64px;
+
+  text-align: center;
+}
+
+
+
+/* ----------------------------------------------------
+ footer↓
+---------------------------------------------------- */
+footer {
+  height: 160px;
+}
+
+.copyright {
+  font-size: 14px;
+
+  padding-top: 80px;
+
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+
+
+
+
+/* ----------------------------------------------
+ レスポンシブ対応↓
+---------------------------------------------- */
+@media (max-width: 767px) {
+  /* ----------------------------------------------------
+ レスポンシブ対応 common↓
+---------------------------------------------------- */
+  body {
+    font-size: 14px;
+  }
+
+
+  /* .container {} */
+
+
+
+
+  .btn-link {
+    width: 180px;
+    padding: 18px 0;
+
+    border-radius: 24px;
+    background: linear-gradient(135deg, #c41a7f 0%, #664bbf 100%);
+    box-shadow: 0px 6px 0px 0px #dd118e;
+  }
+
+
+  .btn-link:hover {
+    transform: translateY(3px);
+
+    box-shadow: 0 3px 0 #dd118e;
+  }
+
+
+
+
+  .h-section-main {
+    font-size: 32px;
+  }
+
+  .h-section-sub {
+    font-size: 18px;
+  }
+
+
+  #to_top {
+    right: 24px;
+    bottom: 24px;
+
+    width: 54px;
+    height: 54px;
+
+    border-radius: 28px;
+  }
+
+
+  #to_top .material-icons-round {
+    font-size: 32px;
+  }
+
+
+  /* ----------------------------------------------------
+ レスポンシブ対応 header↓
+---------------------------------------------------- */
+  header {
+    padding: 24px;
+  }
+
+  .header-logo {
+    font-size: 24px;
+  }
+
+  header .navi-list {
+    gap: 24px;
+  }
+
+
+
+  header .navi-item {
+    font-size: 14px;
+  }
+
+
+
+
+  /* ----------------------------------------------------
+ レスポンシブ対応 hero↓
+---------------------------------------------------- */
+  .hero-wrapper {
+    display: flex;
+    align-items: center;
+
+    height: 500px;
+
+    background-image: url(../img/mv.png);
+    background-repeat: no-repeat;
+    background-position: right -80px bottom;
+    background-size: cover;
+    background-size: contain;
+  }
+
+
+  .hero-sub-title {
+    font-size: 18px;
+  }
+
+  .hero-main-title {
+    font-size: 64px;
+
+    margin-top: 8px;
+  }
+
+
+  .hero-data-title {
+    font-size: 18px;
+  }
+
+
+  .hero .btn {
+    margin-top: 32px;
+  }
+
+
+  .hero .btn::after {
+    width: 163px;
+    height: 34px;
+  }
+
+
+  .hero-speaker {
+    right: 60px;
+    bottom: 20px;
+
+    display: none;
+  }
+
+  .hero-speaker-name {
+    font-size: 18px;
+  }
+
+
+
+  .hero-speaker-job {
+    font-size: 14px;
+  }
+
+
+
+
+
+
+
+  /* ----------------------------------------------------
+ レスポンシブ対応 about↓
+---------------------------------------------------- */
+  .about {
+    margin-top: 64px;
+  }
+
+
+  .about-wrapper {
+    flex-direction: column;
+
+    margin-top: 28px;
+  }
+
+
+  .about-img-wrapper {
+    width: 100%;
+  }
+
+  .about-img {
+    height: 240px;
+
+    object-fit: cover;
+    object-position: center 35%;
+  }
+
+  .about-text-wrapper {
+    width: 100%;
+    margin: 32px auto 0;
+  }
+
+
+  .h-about-text-sub {
+    font-size: 18px;
+  }
+
+
+
+  .h-about-text-main {
+    font-size: 32px;
+
+    margin-top: 8px;
+  }
+
+
+  .about-text {
+    line-height: 1.8;
+
+    margin-top: 32px;
+  }
+
+  .about-table-wrapper {
+    margin-top: 18px;
+  }
+
+
+  .about .btn {
+    text-align: center;
+  }
+
+
+
+
+
+
+  /* ----------------------------------------------------
+ レスポンシブ対応 speaker↓
+---------------------------------------------------- */
+  .speaker {
+    margin-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .speaker .h-section {
+    padding-top: 64px;
+  }
+
+
+  .speaker-wrapper {
+    flex-direction: column-reverse;
+
+    margin-top: 48px;
+  }
+
+
+
+
+  .speaker-text-inner {
+    width: 100%;
+    margin: 16px auto;
+  }
+
+
+
+  .speaker-name-main {
+    font-size: 24px;
+  }
+
+  .speaker-name-sub {
+    font-size: 16px;
+  }
+
+
+  .speaker-text-box {
+    margin-top: 16px;
+  }
+
+
+
+
+  .speaker-img-wrapper {
+    width: 100%;
+  }
+
+
+
+  .speaker-wrapper:nth-child(2n) {
+    flex-direction: column-reverse;
+  }
+
+
+  .speaker-wrapper:nth-child(2n) .speaker-text-inner {
+    margin: 16px auto;
+  }
+
+
+
+
+  /* ----------------------------------------------------
+ レスポンシブ対応 session↓
+---------------------------------------------------- */
+  .session {
+    margin-top: 64px;
+  }
+
+  .session-wrapper {
+    margin-top: 16px;
+    padding-bottom: 64px;
+  }
+
+
+  /* .session-list*/
+
+
+  .session-item {
+    padding: 32px 0 32px;
+  }
+
+
+  .session-data {
+    padding: 0 32px 0 8px;
+  }
+
+
+  .session-text-box {
+    margin-top: 8px;
+  }
+
+
+
+
+  /* ----------------------------------------------------
+ レスポンシブ対応 register↓
+---------------------------------------------------- */
+  .register {
+    margin-top: 64px;
+    padding-bottom: 32px;
+
+    background-image: url(../img/bg.jpg);
+  }
+
+  .register .h-section {
+    padding-top: 64px;
+  }
+
+
+  .register-wrapper {
+    height: 800px;
+    margin: 32px auto;
+    padding: 40px;
+  }
+
+
+
+
+  .form-item {
+    margin-top: 32px;
+  }
+
+
+  .form-title {
+    margin-bottom: 16px;
+  }
+
+  .form-require {
+    font-size: 10px;
+
+    padding-left: 8px;
+  }
+
+  .form-radio {
+    margin-right: 16px;
+  }
+
+
+  .form-input {
+    width: 320px;
+    height: 32px;
+    margin-top: 16px;
+  }
+
+
+  .form-textarea {
+    height: 120px;
+  }
+
+
+
+  .form-select {
+    height: 32px;
+  }
+
+
+
+  .register .btn {
+    margin-top: 64px;
+
+    text-align: center;
+  }
+
+
+
+
+
+  /* ----------------------------------------------------
+ レスポンシブ対応 footer↓
+---------------------------------------------------- */
+  footer {
+    height: 80px;
+  }
+
+  .copyright {
+    font-size: 12px;
+
+    padding-top: 40px;
+  }
+}
